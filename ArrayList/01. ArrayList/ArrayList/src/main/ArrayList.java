@@ -72,11 +72,14 @@ public class ArrayList {
 	}
 
 	
-	// 1: add pelo valor
+	
+	
+	// METODOS DE ADICAO
+	
 	/*
-	 * Adiciona um novolo elemento na lista recebendo um valor.
-	 * não requer um índice específico e, por isso, assume 
-	 * que a inserção do novo elemento deve ser feita no fim da lista, isto é, na próxima posição livre do array.
+	 * Adiciona um novo elemento na lista recebendo um valor.
+	 * não requer um índice específico e, por isso, assume que a inserção do novo elemento
+	 * deve ser feita no fim da lista, isto é, na próxima posição livre do array.
 	 */
 	public boolean addValor(int e) {
 		assegureCapacidade(this.size + 1);
@@ -84,7 +87,14 @@ public class ArrayList {
 		return true;
 	}
 
-	// 2: add o elemento no index especifico, usando o shift para abrir espaço
+	/**
+	 * Adiciona um novo elemento na lista recebendo o index e o elemento.
+	 * Inclui o novo elemento na posição index e desloca os elementos à frente uma posição
+	 * para a direita (shiftParaDireita).
+	 *  
+	 * @param index
+	 * @param e
+	 */
 	public void addIndexValor(int index, int e) {
 		if (index < 0 || index >= this.size)
 			throw new IndexOutOfBoundsException();
@@ -97,7 +107,12 @@ public class ArrayList {
 		this.size += 1;
 		
 	}
-	
+	 /**
+	  * Esse metodo serve para deslocar os elementos a frente da posição index 
+	  * para a direita, para então incluir o elemento na posição index.
+	  * 
+	  * @param index
+	  */
 	private void shiftParaDireita(int index) {
 		if (index == this.list.length - 1) 
 			throw new IndexOutOfBoundsException("Não há espaço para "
@@ -108,14 +123,32 @@ public class ArrayList {
 		}
 	}
 	
-	// 3: add o elemento no index especifico, setando/alterando o valor
+	/**
+	 * Adiciona um novo elemento na lista recebendo o index e o elemento.
+	 * Altera o valor da posicao index indicada.
+	 * 
+	 * @param index
+	 * @param e
+	 */
 	public void addSet(int index, int e) {
 		if (index < 0 || index >= this.size)
 			throw new IndexOutOfBoundsException();
 		this.list[index] = e;
 	}
 	
-	// 1: remove elemento pelo index
+	
+	
+	
+	
+	
+	// METODOS DE REMOCAO
+	
+	/**
+	 * Remove o elemento da lista recebendo seu index.
+	 * 
+	 * @param index
+	 * @return elemento
+	 */
 	public Object removeIndex(int index) {
 		if (index < 0 || index >= this.size)
 			return null;
@@ -127,26 +160,48 @@ public class ArrayList {
 		return e;
 	}
 	
-	// 2: remove elemento pelo valor
-	public boolean removeElem(int e) {
+	/**
+	 * Remove o elemento da lista recebendo o valor.
+	 * Nesse caso, precisa procurar o elemento antes de realizar o shift.
+	 * 
+	 * @param e
+	 * @return boolean
+	 */
+	public boolean removeValue(int e) {
 				
 		for (int i = 0; i < size; i++) {
 			if (this.list[i] == e) {
-				this.removeElem(i);
+				this.removeValue(i);
 				return true;
 			}
-		}
-		
+		}		
 		return false;
 	}
 	
-	// metodo private 
+	/**
+	 * Esse metodo serve para deslocar os elementos para evitar buracos na lista.
+	 *  
+	 * @param index
+	 */
 	private void shiftParaEsquerda(int index) {
 		for (int i = index; i < this.size - 1; i++) {
 			this.list[i] = this.list[i+1];
 		}
 	}
 	
+	
+	
+	
+	// METODOS DE BUSCA
+	
+	/**
+	 * Metodo para busca quando queremos encontrar o indice em que um elemento esta.
+	 * Eh executado com busca linear (O(n)), pois devem iterar sobre a lista procurando 
+	 * pelo objeto passado como parametro.
+	 * 
+	 * @param e
+	 * @return
+	 */
 	public int indexOf(int e) {
 		
 		for (int i = 0; i < size; i++)
@@ -155,10 +210,25 @@ public class ArrayList {
 		return -1;		
 	}
 	
+	/**
+	 * Metodo para busca quando queremos verificar a presenca de um elemento na lista.
+	 * Eh executado com busca linear (O(n)), pois devem iterar sobre a lista procurando 
+	 * pelo objeto passado como parametro.
+	 * 
+	 * @param e
+	 * @return
+	 */
 	public boolean contains(int e) {
 		return this.indexOf(e) != 1;
 	}
 	
+	/**
+	 * Metodo para busca quando queremos acessar o elemento em um determinado indice.
+	 * Eh executado em tempo constante O(1), pois o índice eh fornecido como parametro.
+	 * 
+	 * @param index
+	 * @return
+	 */
 	public int get(int index) {
 		if (index >= size || index <0) {
 			throw new ArrayIndexOutOfBoundsException();
@@ -167,6 +237,13 @@ public class ArrayList {
 		}
 	}
 	
+	
+	/**
+	 * Metodo que cria um novo array e transfere os elementos do array original para ele.
+	 * O(n)
+	 * 
+	 * @param novaCapacidade
+	 */
 	private void resize(int novaCapacidade) {
 		int[] newList = new int[novaCapacidade];
 		for (int i = 0; i < this.list.length; i++)
