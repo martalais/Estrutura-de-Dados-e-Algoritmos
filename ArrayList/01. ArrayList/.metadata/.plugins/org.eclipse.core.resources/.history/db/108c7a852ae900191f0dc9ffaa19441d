@@ -1,0 +1,68 @@
+package main;
+
+import java.util.Arrays;
+
+public class ArrayList {
+	
+	private int[] list;
+	private int size;
+	
+	public ArrayList() {
+		this.list = new int[10];
+		this.size = 0;		
+	}
+	
+	public ArrayList(int capacidade) {
+		this.list = new int[capacidade];
+		this.size = 0;
+	}
+	
+	public boolean isEmpty() {
+		return this.size == 0;
+	}
+	
+	public boolean isFull() {
+		return this.size == this.list.length;
+	}
+	
+	public void add(int e) {
+		if (isFull())
+				resize();
+		this.list[size] = e;
+		size = size + 1;
+	}
+	
+	public int indexOf(int value) {
+		
+		for (int i = 0; i < size; i++)
+			if (this.list[i] == value) 
+				return i;
+		return -1;		
+	}
+	
+	public int get(int index) {
+		if (index >= size || index <0) {
+			throw new ArrayIndexOutOfBoundsException();
+		} else {
+			return this.list[index];
+		}
+	}
+	
+	private void resize() {
+		int[] newList = new int[this.list.length * 2];
+		for (int i = 0; i < size; i++) {
+			newList[i] = this.list[i];
+		}
+		this.list = newList;
+	}
+	
+	public String toString() {
+		return Arrays.toString(this.list);
+	}
+	
+	public int size() {
+		return size;
+	}
+		
+
+}
