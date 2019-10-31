@@ -1,2 +1,0 @@
-INDEX VERSION 1.131+/home/martalmd/Documentos/EDA/ArrayList/01. ArrayList/.metadata/.plugins/org.eclipse.jdt.core
-4083394299.index
