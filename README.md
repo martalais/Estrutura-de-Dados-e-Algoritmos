@@ -1,11 +1,16 @@
-# EDA
+# Estrutura de Dados e Algoritmos
 
-Implementações com comentários explicativos referentes a disciplina de Estrutura de Dados.
+Implementações feitas nas disciplinas Estrutura de Dados e Algoritmos (EDA) e Laboratório de Estrutura de Dados e Algoritmos (LEDA).
 
-1. ArrayList
-2. Fila
-3. Pilha
-4. LinkedList
-5. DoubleLinkedList
-6. Tabela Hash
+## EDA
 
+[Estrutura de Dados](https://github.com/martalais/Estrutura-de-Dados-e-Algoritmos/tree/master/EDA/DataStructures)
+
+[TST](https://github.com/martalais/Estrutura-de-Dados-e-Algoritmos/tree/master/EDA/TST)
+
+
+
+## LEDA
+[R15-02, ArvoreAVLCountFill](https://github.com/martalais/Estrutura-de-Dados-e-Algoritmos/tree/master/LEDA/R15-02)
+
+[R16-02, SkipList](https://github.com/martalais/Estrutura-de-Dados-e-Algoritmos/tree/master/LEDA/R16-02)
