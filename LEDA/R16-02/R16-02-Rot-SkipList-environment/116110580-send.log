@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-11-11T16:17:22.627-0300</date>
+  <logger>MARTA LAIS DE MACEDO DANTAS</logger>
+  <level>FINE</level>
+  <message>File 116110580-MARTA LAIS DE MACEDO DANTAS.zip was received. It was sent by MARTA LAIS DE MACEDO DANTAS from IP 150.165.42.171 at 11-11-2019 16*17*22</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-11-12T09:48:46.636-0300</date>
+  <logger>MARTA LAIS DE MACEDO DANTAS</logger>
+  <level>FINE</level>
+  <message>File 116110580-MARTA LAIS DE MACEDO DANTAS.zip was received. It was sent by MARTA LAIS DE MACEDO DANTAS from IP 10.30.0.28 at 12-11-2019 09*48*46</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-11-12T09:51:12.191-0300</date>
+  <logger>MARTA LAIS DE MACEDO DANTAS</logger>
+  <level>FINE</level>
+  <message>File 116110580-MARTA LAIS DE MACEDO DANTAS.zip was received. It was sent by MARTA LAIS DE MACEDO DANTAS from IP 10.30.0.28 at 12-11-2019 09*51*12</message>
+</record>
